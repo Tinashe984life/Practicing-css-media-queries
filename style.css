@@ -14,9 +14,10 @@
 }
 
 .stuff{
-    position: absolute;
-    left: 480px;
-    right: 480px;
+    position: relative;
+    left: 30%;
+    width: 400px;
+    background-color: rgba(0, 300, 0, 0.4);
 }
 
 .right-c{
@@ -46,24 +47,26 @@
 
     .left-c{
         position: fixed;
-        left: 40px;
+        left: 10px;
         display: flex;
     }
     
     .container{
         position: relative;
         margin: auto;
+        width: 100vw;
+        
     }
     
     .stuff{
         position: absolute;
-        left: 480px;
-        right: 480px;
+        left: 0%;
+        
     }
     
     .right-c{
         position: fixed;
-        right: 40px;
+        right: 10px;
         display: flex;
     }
     
