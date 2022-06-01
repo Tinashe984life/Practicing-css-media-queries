@@ -38,3 +38,46 @@
     list-style: none;
     background-color: rgba(0, 0, 200, 0.4);
 }
+
+@media all and (max-width: 500px) {
+    body{
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .left-c{
+        position: fixed;
+        left: 40px;
+        display: flex;
+    }
+    
+    .container{
+        position: relative;
+        margin: auto;
+    }
+    
+    .stuff{
+        position: absolute;
+        left: 480px;
+        right: 480px;
+    }
+    
+    .right-c{
+        position: fixed;
+        right: 40px;
+        display: flex;
+    }
+    
+    .block{
+        display: grid;  
+        grid-template-columns: auto auto auto;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .block li{
+        border: 1px solid black;
+        text-align: center;
+        list-style: none;
+        background-color: rgba(0, 0, 200, 0.4);
+    }
+}
