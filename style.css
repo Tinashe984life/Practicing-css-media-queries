@@ -1,5 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
 .nb{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left-c{
@@ -38,6 +46,25 @@
     text-align: center;
     list-style: none;
     background-color: rgba(0, 0, 200, 0.4);
+}
+
+.toggle {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10%;
 }
 
 @media all and (max-width: 500px) {
@@ -83,4 +110,83 @@
         list-style: none;
         background-color: rgba(0, 0, 200, 0.4);
     }
+    .toggle {
+        position: absolute;
+        top: .75rem;
+        right: 1rem;
+        
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        
+
+    }
+
+   
+    
+    
+    .bar{
+        height: 3px;
+        width: 100%;
+        background-color: black;
+        border-radius: 10%;  
+        animation-name: slide;
+        animation-timing-function: ease-in-out;
+        animation-duration: 3s;  
+    }
+
+    @keyframes slide {
+        0%{ 
+            position: relative;
+            background-color: black;
+            right: 50px;
+         }
+        50%{
+            position: relative; 
+            background-color: red; 
+            right: -40px; }
+        75%{ 
+            position: relative;
+            background-color: rgb(255, 255, 255); 
+            right: 20px; }
+        100%{
+            position: relative;
+            background-color: white;
+            right: 0px;
+        }
+    }
+
+    b1{
+        animation-name: sl1;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+    }
+    b2{
+        animation-name: sl2;
+        animation-duration: 1500ms;
+        animation-timing-function: ease-in-out;
+    }
+    b3{
+        animation-name: sl3;
+        animation-duration: 2000ms;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes sl1 {
+        0%{
+            
+            right: -30px;
+        }
+        50%{
+            position: absolute;
+            right: 40px;
+        }
+        100%{
+            position: absolute;
+            right: 33px;
+        }
+    }
+
+    
 }
