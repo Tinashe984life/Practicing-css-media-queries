@@ -48,7 +48,7 @@
     background-color: rgba(0, 0, 200, 0.4);
 }
 
-.toggle {
+.toggleb {
     position: absolute;
     top: .75rem;
     right: 1rem;
@@ -110,7 +110,7 @@
         list-style: none;
         background-color: rgba(0, 0, 200, 0.4);
     }
-    .toggle {
+    .toggleb {
         position: absolute;
         top: .75rem;
         right: 1rem;
@@ -186,6 +186,25 @@
             position: absolute;
             right: 33px;
         }
+    }
+
+    .nav-links{
+        position: absolute;
+        flex-direction: column;
+        top: 40px;
+        display: none;
+    }
+
+    .nav-links div{
+        padding: 5px 0px;
+        
+    }
+
+    .nav-links.active{
+        position: absolute;
+        flex-direction: column;
+        top: 40px;
+        display: flex;
     }
 
     
