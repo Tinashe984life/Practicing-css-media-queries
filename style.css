@@ -13,6 +13,7 @@ header{
     justify-content: space-around;
     border-bottom: 1px black solid;
     height: 60px;
+    
 }
 
 .nav1{
@@ -128,4 +129,12 @@ header{
     width: 200px;
     height: 200px;
     border: 1px solid black;
+}
+
+@media (max-width: 500px) {
+    .d-grid{
+        display: grid;
+        grid-template-columns: auto;
+        list-style: none;
+    }
 }
