@@ -4,6 +4,10 @@ body{
     background-color: white;
 }
 
+main h2{
+    text-align: center;
+}
+
 header{
     display: flex;
     justify-content: space-around;
@@ -101,4 +105,27 @@ header{
     height: 5px;
     background-color: black;
     margin: 3px;
+}
+
+.grid-container{
+    position: relative;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.d-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    list-style: none;
+}
+
+.d-grid li{
+    text-align: center;
+}
+
+.block{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
 }
