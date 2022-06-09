@@ -1,211 +1,104 @@
-*{
-    box-sizing: border-box;
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
 }
 
-
-
-.nb{
+header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px black solid;
+    height: 60px;
 }
 
-.left-c{
-    position: fixed;
-    left: 40px;
-    display: flex;
-}
-
-.container{
-    position: relative;
-    margin: auto;
-}
-
-.stuff{
-    position: relative;
-    left: 30%;
-    width: 400px;
-    background-color: rgba(0, 300, 0, 0.4);
-}
-
-.right-c{
-    position: fixed;
-    right: 40px;
-    display: flex;
-}
-
-.block{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    width: 300px;
-    height: 300px;
-}
-
-.block li{
-    border: 1px solid black;
-    text-align: center;
-    list-style: none;
-    background-color: rgba(0, 0, 200, 0.4);
-}
-
-.toggleb {
+.nav1{
     position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
+    top: 10px;
+    left: 10px;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
 }
 
-
-.bar{
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    border-radius: 10%;
-}
-
-@media all and (max-width: 500px) {
-    body{
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .left-c{
-        position: fixed;
-        left: 10px;
-        display: flex;
-    }
+.nav-list{
+    position: relative;
+    list-style: none;
+    left: -105px;
     
-    .container{
+}
+
+.b{
+    position: relative;
+    list-style: none;
+    left: -35px;
+    animation-name: slide;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+}
+
+@keyframes slide {
+    0% {
         position: relative;
-        margin: auto;
-        width: 100vw;
-        
+        left: -105px;
     }
-    
-    .stuff{
-        position: absolute;
-        left: 0%;
-        
+    100% {
+        position: relative;
+        left: -35px;
     }
-    
-    .right-c{
-        position: fixed;
-        right: 10px;
-        display: flex;
-    }
-    
-    .block{
-        display: grid;  
-        grid-template-columns: auto auto auto;
-        width: 300px;
-        height: 300px;
-    }
-    
-    .block li{
-        border: 1px solid black;
-        text-align: center;
-        list-style: none;
-        background-color: rgba(0, 0, 200, 0.4);
-    }
-    .toggleb {
-        position: absolute;
-        top: .75rem;
-        right: 1rem;
-        
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        
+}
 
-    }
+.c{
+    position: relative;
+    list-style: none;
+    left: -105px;
+    animation-name: slide2;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+}
 
-   
-    
-    
-    .bar{
-        height: 3px;
-        width: 100%;
-        background-color: black;
-        border-radius: 10%;  
-        animation-name: slide;
-        animation-timing-function: ease-in-out;
-        animation-duration: 3s;  
+@keyframes slide2 {
+    0% {
+        position: relative;
+        left: -35px;
     }
+    100% {
+        position: relative;
+        left: -105px;
+    }
+}
 
-    @keyframes slide {
-        0%{ 
-            position: relative;
-            background-color: black;
-            right: 50px;
-         }
-        50%{
-            position: relative; 
-            background-color: red; 
-            right: -40px; }
-        75%{ 
-            position: relative;
-            background-color: rgb(255, 255, 255); 
-            right: 20px; }
-        100%{
-            position: relative;
-            background-color: white;
-            right: 0px;
-        }
-    }
+.nav-item{
+    margin-top: 7px;
+}
 
-    b1{
-        animation-name: sl1;
-        animation-duration: 1000ms;
-        animation-timing-function: ease-in-out;
-    }
-    b2{
-        animation-name: sl2;
-        animation-duration: 1500ms;
-        animation-timing-function: ease-in-out;
-    }
-    b3{
-        animation-name: sl3;
-        animation-duration: 2000ms;
-        animation-timing-function: ease-in-out;
-    }
+.nav-item a{
+    text-decoration: none;
+    color: black;
+}
 
-    @keyframes sl1 {
-        0%{
-            
-            right: -30px;
-        }
-        50%{
-            position: absolute;
-            right: 40px;
-        }
-        100%{
-            position: absolute;
-            right: 33px;
-        }
-    }
+.nav2{
+    position: absolute;
+    right: 10px;
+}
 
-    .nav-links{
-        position: absolute;
-        flex-direction: column;
-        top: 40px;
-        display: none;
-    }
+.nav2 ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
 
-    .nav-links div{
-        padding: 5px 0px;
-        
-    }
+.n2{
+    margin-left: 5px;
+}
 
-    .nav-links.active{
-        position: absolute;
-        flex-direction: column;
-        top: 40px;
-        display: flex;
-    }
+.toggleb{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+}
 
-    
+.toggleb span{
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 3px;
 }
